@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Viktoriia Mokhna](https://up.htmlacademy.ru/adaptive/25/user/371455).
-* Наставник: `Виктория Никитина`(https://htmlacademy.ru/profile/id1217273).
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
