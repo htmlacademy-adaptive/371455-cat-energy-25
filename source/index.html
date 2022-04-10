@@ -3,19 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo-link">
-          <img class="main-header__logo-picture" src="/source/img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
-          <img class="main-header__logo-text" src="/source/img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
+        <a class="main-header__logo-link" href="#">
+          <img class="main-header__logo-picture" src="img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
+          <img class="main-header__logo-text" src="img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
 <!--Width 33.32px Height 37.61px  по макету в мобильной версии - что делать с десятичными - я их просто округлила-->
         </a>
-        <nav class="main-nav">
+        <nav class="main-header__nav main-nav">
           <button class="main-nav__toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <span class="toggle__button"></span>
+            <span class="toggle__button">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/>
+              </svg>
+            </span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
@@ -41,27 +46,24 @@
     <main class="main-container">
       <section class="promo">
         <div class="promo__wrapper">
-          <h1 class="promo__header">Функциональное питание для котов</h1>
+          <h1 class="promo__header">Функциональное<br>питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="/source/img/promo-image-mobile.png" width="280" height="270" alt="Баночка функционального питания для котов.">
-          <a class="promo__button button" href="form.html">Подобрать программу</a>
         </div>
+        <a class="promo__button button" href="form.html">Подобрать программу</a>
       </section>
 
       <section class="plan">
         <h2 class="visually-hidden">Виды программ для питания</h2>
         <div class="plan__wrapper">
-          <article class="plan-module plan__module--slim">
-<!-- иконка кота будет в виде псевдоэлемента before and after -->
-            <h3 class="plan-module__title">Похудение</h3>
-            <p class="plan-module__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="plan-module__link" href="catalog.html">Каталог slim</a>
-<!-- а что с иконкой стрелкой? ее тоже псевдоэлементом или лучше как svg с абсолютным позиционированием? -->
+          <article class="plan__module plan__module--slim">
+            <h3 class="plan__module__title">Похудение</h3>
+            <p class="plan__module__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="plan__module__link" href="catalog.html">Каталог slim</a>
           </article>
           <article class="plan__module plan__module--pro">
-            <h3 class="plan-module__title">Набор массы</h3>
-            <p class="plan-module__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="plan-module__link"  href="catalog.html">Каталог pro</a>
+            <h3 class="plan__module__title">Набор массы</h3>
+            <p class="plan__module__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="plan__module__link"  href="catalog.html">Каталог pro</a>
           </article>
         </div>
       </section>
@@ -103,10 +105,9 @@
                   <span class="case__value">60 дней</span>
                   <span class="case__outline">затрачено времени</span>
                 </li>
-                <li class="case__item">
+                <li class="case__item--special">
                   <span class="case__outline--special">Затраты на питание:</span>
-                  <span class="case__value--special">15 000 руб.</span>
-<!-- тут модификатор --specilal  вообще норм ли так называть? -->
+                  <span class="case__value case__value--special">15 000 руб.</span>
                 </li>
               </ul>
             </div>
@@ -114,8 +115,8 @@
 
           <div class="slider">
             <div class="slider__images">
-              <img class="slider__images-before" src="/source/img/cat-before-mobile.png" width="280" height="232" alt="Фото кота до нашего питания.">
-              <img class="slider__images-after" src="/source/img/cat-after-mobile.png" width="243" height="232" alt="Фото кота после нашего питания.">
+              <img class="slider__images-before" src="img/cat-before-mobile.png" width="280" height="232" alt="Фото кота до нашего питания.">
+              <img class="slider__images-after" src="img/cat-after-mobile.png" width="243" height="232" alt="Фото кота после нашего питания.">
             </div>
             <div class="slider__controls">
               <button class="slider__button slider__button--before" type="button">Было</button>
@@ -138,7 +139,7 @@
         </div>
         <div class="contacts__map-wrapper">
           <div class="contacts__map">
-            <img class="contacts__map-image" src="/source/img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
+            <img class="contacts__map-image" src="img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
 <!-- тут наверно надо как то интерактивную карту добавить -->
           </div>
         </div>
@@ -148,7 +149,7 @@
         <h2 class="visually-hidden">Ссылки на главную страницу, наши социальные сети и копирайт</h2>
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
-            <img class="page-footer__logo-image" src="/source/img/vector-images/footer-logo-mobile.svg" width="128" height="24" alt="Логотип магазина.">
+            <img class="page-footer__logo-image" src="img/vector-images/footer-logo-mobile.svg" width="128" height="24" alt="Логотип магазина.">
           </a>
 
           <ul class="page-footer__list social">

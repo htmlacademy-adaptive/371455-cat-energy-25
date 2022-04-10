@@ -3,18 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo-link">
-          <img class="main-header__logo-picture" src="/source/img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
-          <img class="main-header__logo-text" src="/source/img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
+          <img class="main-header__logo-picture" src="img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
+          <img class="main-header__logo-text" src="img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
         </a>
-        <nav class="main-nav">
+        <nav class="main-header__nav main-nav">
           <button class="main-nav__toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <span class="toggle__button"></span>
+            <span class="toggle__button">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/>
+              </svg>
+            </span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -102,7 +107,7 @@
               <legend class="selection__legend">Комментарий</legend>
               <p class="selection__field">
                 <label class="visually-hidden selection__label" for="comment-field">Расскажите обо всех повадках кота</label>
-                <textarea class="selection__input selection__input--textarea" id="comment-field" name="about-comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <textarea class="selection__input selection__input--textarea" id="comment-field" name="about-comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
               </p>
             </fieldset>
 
@@ -145,13 +150,14 @@
     <footer class="page-footer">
       <section class="contacts page-footer__contacts">
         <h2 class="visually-hidden">Наш адрес на карте.</h2>
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper contacts__wrapper--additional">
           <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
         <div class="contacts__map-wrapper">
           <div class="contacts__map">
-            <img class="contacts__map-image" src="/source/img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
+            <img class="contacts__map-image" src="img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
+<!-- тут наверно надо как то интерактивную карту добавить -->
           </div>
         </div>
       </section>
@@ -160,7 +166,7 @@
         <h2 class="visually-hidden">Ссылки на главную страницу, наши социальные сети и копирайт</h2>
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
-            <img class="page-footer__logo-image" src="/source/img/vector-images/footer-logo-mobile.svg" width="128" height="24" alt="Логотип магазина.">
+            <img class="page-footer__logo-image" src="img/vector-images/footer-logo-mobile.svg" width="128" height="24" alt="Логотип магазина.">
           </a>
 
           <ul class="page-footer__list social">
