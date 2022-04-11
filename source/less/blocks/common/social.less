@@ -1,0 +1,28 @@
+.social {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  min-width: 320px;
+  border-bottom: 1px solid @border-grey;
+  border-top: 1px solid @border-grey;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.social__link {
+  text-decoration: none;
+  color: @social-grey;
+
+  &:hover {
+    color: @green;
+  }
+
+  &:active {
+    color: @green;
+    opacity: 0.3;
+  }
+}

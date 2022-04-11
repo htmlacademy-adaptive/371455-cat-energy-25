@@ -1,0 +1,53 @@
+
+.promo {
+  font-family: @oswald;
+  color: @white;
+  text-align: center;
+}
+
+.promo__wrapper {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("/img/background-promo.png");
+  background-repeat: no-repeat;
+  background-color: @green;
+  background-size: 100%;
+  background-position: center;
+  padding-top: 27px;
+  min-height: 302px;
+  margin-bottom: 138px;
+}
+
+.promo__header {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.promo__slogan {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+}
+
+.promo__button {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.promo__button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: -280px;
+  right: 0;
+  left: 0;
+  background-image: url("/img/promo-image/promo-image-mobile.png");
+  width: 280px;
+  height: 270px;
+  margin: 0 auto;
+}
