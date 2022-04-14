@@ -1,11 +1,21 @@
 .contacts__wrapper {
-  padding: 26px 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 
   &--additional {
     background-color: @basic-grey;
+  }
+
+  @media (min-width: @desktop) {
+    width: 565px;
+    padding-top: 60px;
+    padding-bottom: 56px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
@@ -16,6 +26,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @contacts-black;
+  margin: 0;
+
+  @media (min-width: @desktop) {
+    width: 163px;
+  }
 }
 
 .contacts__address {
@@ -25,9 +40,22 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-grey;
+
+  @media (min-width: @desktop) {
+    width: 155px;
+  }
 }
 
 .contacts__map-image {
-  display: flex;
+  display: none;
   margin: 0 auto;
+}
+
+.contacts__map {
+  position: relative;
+}
+
+.contacts iframe {
+  border: none;
+  display: block;
 }

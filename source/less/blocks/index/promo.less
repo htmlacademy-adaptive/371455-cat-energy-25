@@ -3,6 +3,33 @@
   font-family: @oswald;
   color: @white;
   text-align: center;
+
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: @green;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("/img/promo-image/promo-image-desktop.png");
+    background-size: cover;
+    background-position: 0 50%;
+    top: 0;
+    left: 50%;
+    right: 0;
+    z-index: -1;
+    height: 650px;
+    box-sizing: border-box;
+    display: none;
+
+    @media (min-width: @desktop) {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    color: @black;
+    text-align: start;
+  }
 }
 
 .promo__wrapper {
@@ -15,6 +42,22 @@
   padding-top: 27px;
   min-height: 302px;
   margin-bottom: 138px;
+
+  @media (min-width: @tablet) {
+    background: @white;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 49px;
+    min-height: 180px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 110px;
+    padding-right: 110px;
+    background-color: transparent;
+    margin-bottom: 52px;
+    padding-top: 80px;
+  }
 }
 
 .promo__header {
@@ -23,6 +66,17 @@
   line-height: 36px;
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet) {
+    padding-left: 87px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 80px;
+    margin-bottom: 40px;
+  }
 }
 
 .promo__slogan {
@@ -30,13 +84,47 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  margin-bottom: 39px;
+
+  @media (min-width: @tablet) {
+    padding-left: 87px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 80px;
+  }
+}
+
+.promo__button-wrapper {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet) {
+    padding: 0 30px;
+    padding-bottom: 540px;
+    justify-content: start;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 110px;
+    padding-bottom: 199px;
+  }
 }
 
 .promo__button {
   position: relative;
   display: block;
   margin-bottom: 10px;
+
+  @media (min-width: @tablet) {
+    margin-left: 89px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 80px;
+  }
 }
 
 .promo__button::after {
@@ -47,7 +135,24 @@
   right: 0;
   left: 0;
   background-image: url("/img/promo-image/promo-image-mobile.png");
+  background-repeat: no-repeat;
   width: 280px;
   height: 270px;
   margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    width: 709px;
+    height: 609px;
+    top: -30px;
+    left: -90px;
+    z-index: -1;
+    background-image: url("/img/promo-image/index-can-tablet.png");
+  }
+
+  @media (min-width: @desktop) {
+    bottom: 0;
+    top: -320px;
+    left: 365px;
+    background-image: url("/img/promo-image/index-can-desktop.png");
+  }
 }

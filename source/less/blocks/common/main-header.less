@@ -1,16 +1,35 @@
 .main-header__wrapper {
-  box-sizing: border-box;
-  padding: 0 20px;
+  display: grid;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 17px;
   margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 53px;
+  }
 }
 
 .main-header__logo-link {
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 320px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 191px;
+
+  @media (min-width: @tablet) {
+    width: 174px;
+    display: block;
+  }
+
+  @media (min-width: @desktop) {
+    width: 202px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -23,4 +42,27 @@
 
 .main-header__logo-picture {
   margin-right: 57px;
+  width: 33px;
+  height: 38px;
+  display: block;
+
+  @media (min-width: @tablet) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.main-header__logo-text {
+  width: 101px;
+  height: 18px;
+  display: block;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }

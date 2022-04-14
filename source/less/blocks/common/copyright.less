@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
   min-width: 320px;
+
+  @media (min-width: @tablet) {
+    justify-content: flex-end;
+    min-width: 163px;
+  }
 }
 
 .copyright__link {
@@ -13,6 +18,10 @@
   color: @dark-grey;
   text-decoration: none;
 
+  @media (min-width: @tablet) {
+    margin-right: 22px;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -20,6 +29,7 @@
 
 .copyright__icon {
   color: @social-grey;
+  display: block;
 
   &:hover {
     color: @green;
