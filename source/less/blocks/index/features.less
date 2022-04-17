@@ -1,8 +1,21 @@
 
-
+// тут не работает тема с отступами между элементами - элемент списка не того же размера что иконка
 .features__wrapper {
-  padding: 20px 20px;
+  padding-top: 20px;
   padding-bottom: 49px;
+
+  @media (min-width: @tablet) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid @input-border;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    border: none;
+    margin: 0 auto;
+  }
 }
 
 .features__title {
@@ -13,17 +26,44 @@
   color: @black;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
-  row-gap: 26px;
+  row-gap: 20px;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 154px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 95px;
+  }
 }
 
 .features__item {
   position: relative;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 111px;
+    padding-bottom: 57px;
+  }
 
   &::before {
     content: "";
@@ -31,35 +71,34 @@
     background-color: @green;
     background-repeat: no-repeat;
     background-position: center;
+    flex-shrink: 0;
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
 .features__item--leaf::before {
   background-image: url("/img/vector-images/icon_leaf.svg");
-  width: 30px;
-  height: 32px;
-  padding: 14px 15px;
 }
 
 .features__item--tub::before {
   background-image: url("/img/vector-images/icon_tub.svg");
-  width: 29px;
-  height: 31px;
-  padding: 13px 16px 16px 15px;
 }
 
 .features__item--eat::before {
   background-image: url("/img/vector-images/icon_eat.svg");
-  width: 25px;
-  height: 30px;
-  padding: 15px 17px 15px 18px;
 }
 
 .features__item--alarm::before {
   background-image: url("/img/vector-images/icon_alarm.svg");
-  width: 32px;
-  height: 33px;
-  padding: 13px 14px 14px 14px;
 }
 
 .features__descriptions {
@@ -70,4 +109,11 @@
   line-height: 18px;
   color: @dark-grey;
   padding-left: 80px;
+  display: flex;
+
+  @media (min-width: @tablet) {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

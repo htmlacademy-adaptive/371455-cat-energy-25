@@ -1,6 +1,6 @@
 .toggle {
   position: absolute;
-  top: 4px;
+  top: -5px;
   right: 0;
   display: flex;
   justify-content: center;
@@ -11,6 +11,9 @@
   padding: 20px;
   background: 0 0;
   border: 0;
-
   cursor: pointer;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }
