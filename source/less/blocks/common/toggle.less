@@ -1,7 +1,7 @@
 .toggle {
   position: absolute;
-  top: -5px;
-  right: 0;
+  top: -2px;
+  right: -3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +9,14 @@
   width: 30px;
   height: 30px;
   padding: 20px;
+  padding-bottom: 17px;
   background: 0 0;
   border: 0;
   cursor: pointer;
+}
 
-  @media (min-width: @tablet) {
+@media (min-width: @tablet) {
+  .toggle {
     display: none;
   }
 }

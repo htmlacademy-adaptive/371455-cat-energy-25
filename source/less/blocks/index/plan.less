@@ -3,40 +3,21 @@
 }
 
 .plan__wrapper {
+  max-width: 600px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
   padding-top: 10px;
-  display: grid;
-  row-gap: 20px;
-
-  @media (min-width: @tablet) {
-    row-gap: 30px;
-  }
-
-  @media (min-width: @desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding-top: 0;
-  }
+  padding-bottom: 10px;
 }
 
 .plan__module {
   background-color: @basic-grey;
   padding: 30px 20px 22px 20px;
+}
 
-  @media (min-width: @tablet) {
-    padding: 77px 62px 57px 53px;
-  }
-
-  @media (min-width: @desktop) {
-    padding: 77px 51px 59px 52px;
-    max-width: 570px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 30%;
-    overflow: hidden;
-  }
+.plan__module--slim {
+  margin-bottom: 20px;
 }
 
 .plan__module__title {
@@ -50,55 +31,15 @@
   margin: 0;
   margin-bottom: 29px;
 
-  @media (min-width: @tablet) {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 24px;
-    padding: 0;
-  }
-
-  @media (min-width: @desktop) {
-    padding-left: 162px;
-    margin-bottom: 73px;
-  }
-
   &::before {
     content: "";
     position: absolute;
     background-color: @green;
-    top: -5px;
-    left: 5px;
+    top: -6px;
+    left: 2px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-
-    @media (min-width: @tablet) {
-      width: 200px;
-      height: 200px;
-      top: 15px;
-      left: auto;
-      right: 0;
-    }
-
-    @media (min-width: @desktop) {
-      width: 100px;
-      height: 100px;
-      top: -30px;
-      left: 0;
-      right: auto;
-    }
-  }
-}
-
-.plan__module--slim {
-  @media (min-width: @desktop) {
-    margin-right: 40px;
-  }
-}
-
-.plan__module--pro {
-  @media (min-width: @desktop) {
-    margin-left: 40px;
   }
 }
 
@@ -109,26 +50,8 @@
   background-image: url("../img/vector-images/module-slim-vector.svg");
   width: 36px;
   height: 50px;
-  top: -10px;
-  left: 10px;
-
-  @media (min-width: @tablet) {
-    width: 140px;
-    height: 194px;
-    background-image: url("../img/vector-images/module-slim-tablet.svg");
-    top: 4px;
-    left: auto;
-    right: 32px;
-  }
-
-  @media (min-width: @desktop) {
-    width: 70px;
-    height: 97px;
-    background-image: url("../img/vector-images/module-slim-desktop.svg");
-    top: -36px;
-    left: 15px;
-    right: auto;
-  }
+  top: -9px;
+  left: 9px;
 }
 
 .plan__module--pro .plan__module__title::after {
@@ -140,25 +63,7 @@
   width: 67px;
   height: 28px;
   top: 5px;
-  left: -5px;
-
-  @media (min-width: @tablet) {
-    width: 269px;
-    height: 112px;
-    background-image: url("../img/vector-images/module-pro-tablet.svg");
-    top: 60px;
-    left: auto;
-    right: -35px;
-  }
-
-  @media (min-width: @desktop) {
-    width: 134px;
-    height: 56px;
-    background-image: url("../img/vector-images/module-pro-desktop.svg");
-    right: auto;
-    top: -10px;
-    left: -19px;
-  }
+  left: -7px;
 }
 
 .plan__module__description {
@@ -166,24 +71,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   border-bottom: 1px solid @border-grey;
   margin: 0;
   margin-bottom: 19px;
-
-  @media (min-width: @tablet) {
-    font-size: 16px;
-    line-height: 24px;
-    border: none;
-    margin-bottom: 52px;
-    padding: 0;
-    width: 60%;
-  }
-
-  @media (min-width: @desktop) {
-    margin-bottom: 27px;
-    width: 100%;
-  }
 }
 
 .plan__module__link {
@@ -191,17 +82,145 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
-
-  @media (min-width: @tablet) {
-    font-size: 20px;
-    line-height: 30px;
-  }
+  display: block;
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet) {
+  .plan__wrapper {
+    max-width: 1024px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  .plan__module {
+    padding: 77px 62px 57px 53px;
+  }
+
+  .plan__module--slim {
+    margin-bottom: 30px;
+  }
+
+  .plan__module__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+    padding: 0;
+    padding-right: 254px;
+  }
+
+  .plan__module__title::before {
+    width: 200px;
+    height: 200px;
+    top: 15px;
+    left: auto;
+    right: 0;
+  }
+
+  .plan__module--slim .plan__module__title::after {
+    width: 140px;
+    height: 194px;
+    background-image: url("../img/vector-images/module-slim-tablet.svg");
+    top: 4px;
+    left: auto;
+    right: 30px;
+  }
+
+  .plan__module--pro .plan__module__title::after {
+    width: 269px;
+    height: 112px;
+    background-image: url("../img/vector-images/module-pro-tablet.svg");
+    top: 58px;
+    left: auto;
+    right: -35px;
+  }
+
+  .plan__module__description {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    margin-bottom: 52px;
+    padding: 0;
+    width: 58%;
+  }
+
+  .plan__module__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .plan__wrapper {
+    max-width: 1220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 82px;
+    padding-bottom: 31px;
+  }
+
+  .plan__module {
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 77px 51px 59px 52px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 30%;
+    margin-bottom: 0;
+  }
+
+  .plan__module__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+    padding-right: 0;
+  }
+
+  .plan__module__title::before {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    left: 0;
+    right: auto;
+  }
+
+  .plan__module--slim {
+    margin-right: 40px;
+  }
+
+  .plan__module--pro {
+    margin-left: 40px;
+  }
+
+  .plan__module--slim .plan__module__title::after {
+    width: 70px;
+    height: 97px;
+    background-image: url("../img/vector-images/module-slim-desktop.svg");
+    top: -36px;
+    left: 15px;
+    right: auto;
+  }
+
+  .plan__module--pro .plan__module__title::after {
+    width: 134px;
+    height: 56px;
+    background-image: url("../img/vector-images/module-pro-desktop.svg");
+    right: auto;
+    top: -10px;
+    left: -19px;
+  }
+
+  .plan__module__description {
+    margin-bottom: 27px;
+    width: 100%;
   }
 }
