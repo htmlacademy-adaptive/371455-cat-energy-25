@@ -10,7 +10,11 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo-link">
-          <img class="main-header__logo-picture" src="img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/vector-images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/vector-images/logo-tablet.svg">
+            <img class="main-header__logo-picture" src="img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
+          </picture>
           <img class="main-header__logo-text" src="img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
         </a>
         <nav class="main-header__nav main-nav">
@@ -45,94 +49,126 @@
 
     <main class="main-container">
       <section class="selection">
-        <div class="selection__wrapper">
-          <h1 class="selection__title">Подбор программы</h1>
-          <p class="selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <div class="selection__title-wrapper">
+            <h1 class="selection__title extra-title">Подбор программы</h1>
+            <p class="selection__description extra-description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+          </div>
           <form class="selection__form" action="http://echo.htmlacademy.ru" method="post">
-            <fieldset class="selection__fieldset selection__fieldset--cat-info">
-              <legend class="visually-hidden">Информация о коте</legend>
-              <p class="selection__field">
-                <label class="selection__label" for="cat-name-field">Имя:*</label>
-                <input class="selection__input" type="text" id="cat-name-field" name="cat-name" placeholder="Барсик" required>
-              </p>
-              <p class="selection__field">
-                <label class="selection__label" for="weight-field">Вес (кг):*</label>
-                <input class="selection__input" type="number" id="weight-field" name="cat-weight" placeholder="7" min="0" required>
-              </p>
-              <p class="selection__field">
-                <label class="selection__label" for="age-field">Возраст (лет):</label>
-                <input class="selection__input" type="number" id="age-field" name="cat-age" placeholder="7" min="0">
-              </p>
-            </fieldset>
+            <div class="selection__row-wrapper">
+              <fieldset class="selection__fieldset selection__fieldset--cat-info">
+                <legend class="visually-hidden">Информация о коте</legend>
+                <p class="selection__field text-input">
+                  <label class="text-input__label" for="cat-name-field">Имя:*</label>
+                  <input class="text-input__input" type="text" id="cat-name-field" name="cat-name" placeholder="Барсик" required>
+                </p>
+                <p class="selection__field text-input">
+                  <label class="text-input__label" for="weight-field">Вес (кг):*</label>
+                  <input class="text-input__input" type="number" id="weight-field" name="cat-weight" placeholder="7" min="0" required>
+                </p>
+                <p class="selection__field text-input">
+                  <label class="text-input__label" for="age-field">Возраст (лет):</label>
+                  <input class="text-input__input" type="number" id="age-field" name="cat-age" placeholder="7" min="0">
+                </p>
+              </fieldset>
 
-            <fieldset class="selection__fieldset selection__fieldset--plan">
-              <legend class="visually-hidden">Выбор программы</legend>
-              <ul class="selection__list selection__list--plan">
-                <li class="selection__item">
-                  <input class="selection__input selection__input--radio" type="radio" id="weight-loss-field" name="plan-selection" value="weight-loss" checked>
-                  <label class="selection__label" for="weight-loss-field">Похудение</label>
-                </li>
+              <fieldset class="selection__fieldset selection__fieldset--plan">
+                <legend class="visually-hidden">Выбор программы</legend>
+                <ul class="selection__list">
+                  <li class="selection__item radio__item">
+                    <label class="radio__label">
+                      <input class="radio__input" type="radio" name="plan-selection" value="weight-loss" checked>
+                      <span class="radio__checkmark"></span>
+                      Похудение
+                    </label>
+                  </li>
 
-                <li class="selection__item">
-                  <input class="selection__input selection__input--radio" type="radio" id="weight-gain-field" name="plan-selection" value="weight-gain">
-                  <label class="selection__label" for="weight-gain-field">Набор массы</label>
-                </li>
+                  <li class="selection__item radio__item">
+                    <label class="radio__label">
+                      <input class="radio__input" type="radio" name="plan-selection" value="weight-gain">
+                      <span class="radio__checkmark"></span>
+                      Набор массы
+                    </label>
+                  </li>
 
-                <li class="selection__item">
-                  <input class="selection__input selection__input--radio" type="radio" id="advice-field" name="plan-selection" value="advice-wanted">
-                  <label class="selection__label" for="advice-field">Не знаю (Нужен ваш совет)</label>
-                </li>
-              </ul>
-            </fieldset>
+                  <li class="selection__item radio__item">
+                    <label class="radio__label">
+                      <input class="radio__input" type="radio" name="plan-selection" value="advice-wanted">
+                      <span class="radio__checkmark"></span>
+                      Не знаю (Нужен ваш совет)
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
             <fieldset class="selection__fieldset selection__fieldset--contacts">
-              <legend class="selection__legend">Контактные данные (владельца кота)</legend>
-              <p class="selection__field">
-                <label class="selection__label" for="email-field">E-mail:*</label>
-                <input class="selection__input" type="email" id="email-field" name="owner-email" placeholder="kuklachev@gmail.com" required>
-                <svg width="19" height="14" viewBox="0 0 19 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="#222" stroke-width="1.3" d="M.65 5.85v8M17.65 5.85v8M0 13.2h18M0 1.2h18M17.35 3.03 9 9.53.65 3.02V1.5h16.7v1.53Z"/>
-                </svg>
-              </p>
+              <legend class="selection__legend special-title">
+                <span class="special-title__text">Контактные данные (владельца кота)</span>
+              </legend>
+              <div class="selection__field-wrapper">
+                <p class="selection__field text-input">
+                  <label class="text-input__label" for="email-field">E-mail:*</label>
+                  <input class="text-input__input text-input__input--icon" type="email" id="email-field" name="owner-email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="text-input__icon" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="#222" stroke-width="1.3" d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03 10 9.53l-8.35-6.5V1.5h16.7v1.53Z"/>
+                  </svg>
+                </p>
 
-              <p class="selection__field">
-                <label class="selection__label" for="phone-field">Телефон:*</label>
-                <input class="selection__input" type="tel" id="phone-field" name="owner-phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
-                  <path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/></g><defs><clipPath id="a"><path transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
-                </svg>
-              </p>
+                <p class="selection__field text-input">
+                  <label class="text-input__label" for="phone-field">Телефон:*</label>
+                  <input class="text-input__input text-input__input--icon" type="tel" id="phone-field" name="owner-phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
+                  <svg class="text-input__icon" width="20" height="21" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
+                    <path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/></g><defs><clipPath id="a"><path transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
+                  </svg>
+                </p>
+              </div>
             </fieldset>
 
             <fieldset class="selection__fieldset selection__fieldset--comment">
-              <legend class="selection__legend">Комментарий</legend>
-              <p class="selection__field">
-                <label class="visually-hidden selection__label" for="comment-field">Расскажите обо всех повадках кота</label>
-                <textarea class="selection__input selection__input--textarea" id="comment-field" name="about-comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <legend class="selection__legend special-title">
+                <span class="special-title__text">Комментарий</span>
+              </legend>
+              <p class="selection__field text-input">
+                <label class="visually-hidden text-input__label" for="comment-field">Расскажите обо всех повадках кота</label>
+                <textarea class="text-input__textarea" id="comment-field" name="about-comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
               </p>
             </fieldset>
 
             <fieldset class="selection__fieldset selection__fieldset--additional">
-              <legend class="selection__legend">Дополнительно</legend>
-              <ul class="selection__list selection__list--additional">
-                <li class="selection__item">
-                  <input class="selection__input selection__input--checkbox" type="checkbox" id="sweetener-field" name="additional-info" value="sweetener" checked>
-                  <label class="selection__label" for="sweetener-field">Сахарозаменитель</label>
+              <legend class="selection__legend special-title">
+                <span class="special-title__text">Дополнительно</span>
+              </legend>
+              <ul class="selection__list">
+                <li class="selection__item checkbox__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__input" type="checkbox" name="additional-info" value="sweetener" checked>
+                    <span class="checkbox__checkmark"></span>
+                    Сахарозаменитель
+                  </label>
                 </li>
 
-                <li class="selection__item">
-                  <input class="selection__input selection__input--checkbox" type="checkbox" id="water-field" name="additional-info" value="water">
-                  <label class="selection__label" for="water-field">Питьевая вода</label>
+                <li class="selection__item  checkbox__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__input" type="checkbox" name="additional-info" value="water">
+                    <span class="checkbox__checkmark"></span>
+                    Питьевая вода
+                  </label>
                 </li>
 
-                <li class="selection__item">
-                  <input class="selection__input selection__input--checkbox" type="checkbox" id="milk-field" name="additional-info" value="milk">
-                  <label class="selection__label" for="milk-field">Молоко</label>
+                <li class="selection__item  checkbox__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__input" type="checkbox" name="additional-info" value="milk">
+                    <span class="checkbox__checkmark"></span>
+                    Молоко
+                  </label>
                 </li>
 
-                <li class="selection__item">
-                  <input class="selection__input selection__input--checkbox" type="checkbox" id="vitamin-field" name="additional-info" value="vitamin">
-                  <label class="selection__label" for="vitamin-field">Витамины</label>
+                <li class="selection__item  checkbox__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__input" type="checkbox" name="additional-info" value="vitamin">
+                    <span class="checkbox__checkmark"></span>
+                    Витамины
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -144,21 +180,32 @@
               </p>
             </div>
           </form>
-        </div>
       </section>
     </main>
 
     <footer class="page-footer">
       <section class="contacts page-footer__contacts">
         <h2 class="visually-hidden">Наш адрес на карте.</h2>
-        <div class="contacts__wrapper contacts__wrapper--additional">
-          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__wrapper">
+          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <address class="contacts__address">
+            <span class="contacts__address-details">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="contacts__address-city">Санкт-Петербург</span>
+          </address>
         </div>
-        <div class="contacts__map-wrapper">
-          <div class="contacts__map">
+        <div class="contacts__map">
+          <div class="contacts__map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4320.202750758172!2d30.32092634797122!3d59.93950847141021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sde!4v1649967865505!5m2!1sru!2sde"
+              width="768"
+              height="362"
+              style="border: 0;"
+              allowfullscreen=""
+              title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="contacts__map-image-wrapper">
             <img class="contacts__map-image" src="img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
-<!-- тут наверно надо как то интерактивную карту добавить -->
           </div>
         </div>
       </section>

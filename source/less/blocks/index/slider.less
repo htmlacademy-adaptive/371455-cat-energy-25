@@ -13,9 +13,17 @@
   color: @black;
   border: none;
   background-color: transparent;
+}
 
-  @media (min-width: @tablet) {
+@media (min-width: @tablet) {
+  .slider__button {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .slider {
+    padding-top: 100px;
   }
 }

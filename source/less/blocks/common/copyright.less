@@ -2,12 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 320px;
-
-  @media (min-width: @tablet) {
-    justify-content: flex-end;
-    min-width: 163px;
-  }
 }
 
 .copyright__link {
@@ -17,10 +11,6 @@
   line-height: 18px;
   color: @dark-grey;
   text-decoration: none;
-
-  @media (min-width: @tablet) {
-    margin-right: 22px;
-  }
 
   &:active {
     opacity: 0.3;
@@ -38,5 +28,11 @@
   &:active {
     color: @green;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet) {
+  .copyright__link {
+    margin-right: 24px;
   }
 }

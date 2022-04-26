@@ -1,21 +1,10 @@
-
-// тут не работает тема с отступами между элементами - элемент списка не того же размера что иконка
 .features__wrapper {
-  padding-top: 20px;
-  padding-bottom: 49px;
-
-  @media (min-width: @tablet) {
-    padding-top: 45px;
-    padding-bottom: 47px;
-    border-bottom: 1px solid @input-border;
-  }
-
-  @media (min-width: @desktop) {
-    padding-top: 71px;
-    padding-bottom: 69px;
-    border: none;
-    margin: 0 auto;
-  }
+  max-width: 600px;
+  padding-top: 10px;
+  padding-bottom: 29px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }
 
 .features__title {
@@ -26,44 +15,18 @@
   color: @black;
   margin: 0;
   margin-bottom: 40px;
-
-  @media (min-width: @tablet) {
-    font-size: 60px;
-    line-height: 60px;
-    margin-bottom: 72px;
-  }
 }
 
 .features__list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  row-gap: 20px;
-
-  @media (min-width: @tablet) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 154px;
-    row-gap: 37px;
-  }
-
-  @media (min-width: @desktop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 95px;
-  }
 }
 
 .features__item {
   position: relative;
-  display: flex;
-  align-items: center;
-
-  @media (min-width: @tablet) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 111px;
-    padding-bottom: 57px;
-  }
+  margin-bottom: 20px;
+  min-height: 60px;
 
   &::before {
     content: "";
@@ -75,13 +38,6 @@
     display: inline-flex;
     width: 60px;
     height: 60px;
-
-    @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
-      top: 0;
-      left: 0;
-    }
   }
 }
 
@@ -109,11 +65,85 @@
   line-height: 18px;
   color: @dark-grey;
   padding-left: 80px;
-  display: flex;
+  padding-top: 3px;
+}
 
-  @media (min-width: @tablet) {
+@media (min-width: @tablet) {
+  .features__wrapper {
+    max-width: 1024px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+    padding-bottom: 46px;
+    border-bottom: 1px solid @input-border;
+  }
+
+  .features__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  .features__list {
+    counter-reset: num;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 37px;
+  }
+
+  .features__item {
+    min-height: 280px;
+    margin-bottom: 0;
+  }
+
+  .features__item::before {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    left: 0;
+  }
+
+  .features__item::after {
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    min-width: 112px;
+    color: @basic-grey;
+    text-align: center;
+    font-family: @oswald;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    z-index: -1;
+    top: 0;
+    left: 113px;
+  }
+
+  .features__descriptions {
+    padding-top: 151px;
     padding-left: 0;
+    padding-right: 60px;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .features__wrapper {
+    max-width: 1220px;
+    padding-top: 40px;
+    padding-bottom: 16px;
+    border: none;
+  }
+
+  .features__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 79px;
+  }
+
+  .features__descriptions {
+    padding-right: 0;
   }
 }

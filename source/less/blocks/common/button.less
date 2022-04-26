@@ -5,13 +5,12 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding: 7px 44px;
+  padding: 11px 44px;
   color: @white;
   background-color: @green;
   display: block;
   text-align: center;
   box-sizing: border-box;
-  width: 280px;
   border: none;
 
   &:hover {
@@ -23,16 +22,37 @@
     color: rgba(255, 255, 255, 0.3);
     border: none;
   }
-
-  @media (min-width: @tablet) {
-    width: 244px;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 14px 26px;
-  }
 }
 
 .button--more {
   background-color: @basic-grey;
   color: @dark-grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button--catalog {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+}
+
+@media (min-width: @tablet) {
+  .button {
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px 26px;
+  }
+
+  .button--catalog {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  .button--more {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }

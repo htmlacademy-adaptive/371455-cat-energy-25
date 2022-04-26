@@ -3,24 +3,34 @@
   flex-wrap: wrap;
   justify-content: space-between;
   height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .product__link-image {
   width: 140px;
-  height: 144px;
+  height: 112px;
   overflow: hidden;
 }
 
 .product__image {
-  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 
 .product__content {
-  padding-bottom: 22px;
+  width: 140px;
+}
+
+.product__button {
+  margin-top: 12px;
+  flex: 0 0 100%;
 }
 
 .product__link-title {
   text-decoration: none;
+  display: block;
+  padding-right: 64px;
 }
 
 .product__title {
@@ -34,11 +44,91 @@
   color: @special-dark-grey;
 }
 
-.product__info {
+.product__info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product__info-item {
+  display: flex;
+  justify-content: space-between;
   font-family: @arial;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: @dark-grey;
+}
+
+@media (min-width: @tablet) {
+  .product__wrapper {
+    position: relative;
+    background-color: @basic-grey;
+    padding: 161px 37px 39px 37px;
+    justify-content: center;
+    width: 324px;
+  }
+
+  .product__link-image {
+    position: absolute;
+    bottom: 80%;
+    left: 30%;
+  }
+
+  .product__content {
+    margin-bottom: 33px;
+    padding-top: 0;
+    min-width: 251px;
+  }
+
+  .product__link-title {
+    padding-right: 0;
+    margin-bottom: 14px;
+  }
+
+  .product__title {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  .product__info-item {
+    padding-bottom: 8px;
+    padding-top: 7px;
+    border-bottom: 1px solid @special-grey;
+    font-size: 16px;
+  }
+
+  .product__button {
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .product__wrapper {
+    width: 245px;
+    padding: 163px 38px 40px 39px;
+  }
+
+  .product__content {
+    min-width: 166px;
+  }
+
+  .product__link-title {
+    padding: 0 5px;
+    margin-bottom: 17px;
+  }
+
+  .product__title {
+    padding: 0;
+    line-height: 21px;
+    margin-bottom: 0;
+  }
+
+  .product__button {
+    min-width: 168px;
+  }
 }

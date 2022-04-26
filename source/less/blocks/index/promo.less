@@ -1,35 +1,7 @@
-
 .promo {
   font-family: @oswald;
   color: @white;
   text-align: center;
-
-  &::before {
-    content: "";
-    background-repeat: no-repeat;
-    position: absolute;
-    background-color: @green;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("/img/promo-image/promo-image-desktop.png");
-    background-size: cover;
-    background-position: 0 50%;
-    top: 0;
-    left: 50%;
-    right: 0;
-    z-index: -1;
-    height: 650px;
-    box-sizing: border-box;
-    display: none;
-
-    @media (min-width: @desktop) {
-      display: block;
-    }
-  }
-
-  @media (min-width: @tablet) {
-    color: @black;
-    text-align: start;
-  }
 }
 
 .promo__wrapper {
@@ -39,25 +11,9 @@
   background-color: @green;
   background-size: 100%;
   background-position: center;
-  padding-top: 27px;
   min-height: 302px;
-  margin-bottom: 138px;
-
-  @media (min-width: @tablet) {
-    background: @white;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 49px;
-    min-height: 180px;
-  }
-
-  @media (min-width: @desktop) {
-    padding-left: 110px;
-    padding-right: 110px;
-    background-color: transparent;
-    margin-bottom: 52px;
-    padding-top: 80px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .promo__header {
@@ -66,17 +22,7 @@
   line-height: 36px;
   margin: 0;
   margin-bottom: 25px;
-
-  @media (min-width: @tablet) {
-    padding-left: 87px;
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  @media (min-width: @desktop) {
-    padding-left: 80px;
-    margin-bottom: 40px;
-  }
+  padding-top: 27px;
 }
 
 .promo__slogan {
@@ -84,54 +30,24 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-
-  @media (min-width: @tablet) {
-    padding-left: 87px;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  @media (min-width: @desktop) {
-    padding-left: 80px;
-  }
+  padding-bottom: 150px;
 }
 
 .promo__button-wrapper {
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-
-  @media (min-width: @tablet) {
-    padding: 0 30px;
-    padding-bottom: 540px;
-    justify-content: start;
-  }
-
-  @media (min-width: @desktop) {
-    padding: 0 110px;
-    padding-bottom: 199px;
-  }
-}
-
-.promo__button {
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 138px;
   position: relative;
-  display: block;
-  margin-bottom: 10px;
-
-  @media (min-width: @tablet) {
-    margin-left: 89px;
-  }
-
-  @media (min-width: @desktop) {
-    margin-left: 80px;
-  }
+  padding-bottom: 10px;
 }
 
 .promo__button::after {
   content: "";
   position: absolute;
   bottom: 0;
-  top: -280px;
+  top: -135px;
   right: 0;
   left: 0;
   background-image: url("/img/promo-image/promo-image-mobile.png");
@@ -139,20 +55,100 @@
   width: 280px;
   height: 270px;
   margin: 0 auto;
+}
 
-  @media (min-width: @tablet) {
+@media (min-width: @tablet) {
+  .promo {
+    color: @black;
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .promo__wrapper {
+    background: @white;
+    padding-top: 27px;
+    padding-left: 117px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    min-height: 181px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .promo__header {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 0;
+    margin-bottom: 41px;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 0;
+  }
+
+  .promo__button-wrapper {
+    max-width: 1024px;
+    padding-right: 30px;
+    padding-left: 117px;
+    padding-bottom: 526px;
+    padding-top: 29px;
+  }
+
+  .promo__button::after {
     width: 709px;
     height: 609px;
-    top: -30px;
-    left: -90px;
+    top: 0;
+    left: 0;
     z-index: -1;
     background-image: url("/img/promo-image/index-can-tablet.png");
   }
+}
 
-  @media (min-width: @desktop) {
+@media (min-width: @desktop) {
+  .promo::before {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: @green;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("/img/promo-image/promo-image-desktop.png");
+    background-size: cover;
+    background-position: 0 0;
+    top: 0;
+    left: 50%;
+    right: 0;
+    z-index: -1;
+    min-height: 694px;
+    box-sizing: border-box;
+  }
+
+  .promo__wrapper {
+    max-width: 1220px;
+    padding-left: 190px;
+    background-color: transparent;
+    padding-top: 91px;
+    min-height: 180px;
+  }
+
+  .promo__header {
+    margin-bottom: 40px;
+  }
+
+  .promo__button-wrapper {
+    max-width: 1220px;
+    padding-left: 190px;
+    padding-bottom: 185px;
+    padding-top: 32px;
+  }
+
+  .promo__button::after {
+    width: 552px;
+    height: 499px;
     bottom: 0;
-    top: -320px;
-    left: 365px;
+    top: -282px;
+    left: 228px;
     background-image: url("/img/promo-image/index-can-desktop.png");
   }
 }
