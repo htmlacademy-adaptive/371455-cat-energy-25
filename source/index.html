@@ -17,14 +17,10 @@
           </picture>
           <img class="main-header__logo-text" src="img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
         </a>
-        <nav class="main-header__nav main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <span class="toggle__button">
-              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/>
-              </svg>
-            </span>
+            <span class="main-nav__toggle-button toggle__button"></span>
           </button>
           <ul class="main-nav__list main-nav__list--index">
             <li class="main-nav__item main-nav__item--current">
@@ -77,7 +73,7 @@
       <section class="features">
         <div class="features__wrapper">
           <h2 class="features__title">Как это работает</h2>
-          <ol class="features__list">
+          <ul class="features__list">
             <li class="features__item features__item--leaf">
 <!-- как можно назвать этот элемент списка не привязываясь к тому что изображено на иконках? -->
               <p class="features__descriptions">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -91,7 +87,7 @@
             <li class="features__item features__item--alarm">
               <p class="features__descriptions">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
-          </ol>
+          </ul>
         </div>
       </section>
 
@@ -209,5 +205,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
