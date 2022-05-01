@@ -122,6 +122,12 @@
     z-index: -1;
     min-height: 694px;
     box-sizing: border-box;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("/img/promo-image/promo-image@2x.png");
+      background-size: 720px auto;
+    }
   }
 
   .promo__wrapper {
