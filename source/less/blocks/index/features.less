@@ -95,6 +95,7 @@
   .features__item {
     min-height: 280px;
     margin-bottom: 0;
+    counter-increment: num;
   }
 
   .features__item::before {
@@ -106,7 +107,6 @@
 
   .features__item::after {
     content: counter(num);
-    counter-increment: num;
     display: inline-block;
     position: absolute;
     min-width: 112px;

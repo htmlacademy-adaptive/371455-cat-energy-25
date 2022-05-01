@@ -1,5 +1,13 @@
+.main-nav--closed .main-nav__toggle-button {
+  background-image: url("/img/vector-images/toggle-button--closed.svg");
+}
+
+.main-nav--opened .main-nav__toggle-button {
+  background-image: url("/img/vector-images/toggle-button--opened.svg");
+}
+
 .main-nav__list {
-  display: none;
+  position: absolute;
   list-style: none;
   background-color: @white;
   margin: 0 auto;
@@ -17,7 +25,7 @@
   cursor: pointer;
   text-decoration: none;
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
 
   color: @black;
   display: flex;
@@ -32,8 +40,32 @@
   }
 }
 
+@media (max-width: @mobile) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    display: block;
+  }
+}
+
 @media (min-width: @tablet) {
+  .main-nav {
+    padding-top: 16px;
+  }
+
   .main-nav__list {
+    position: static;
     display: flex;
     flex-wrap: wrap;
   }

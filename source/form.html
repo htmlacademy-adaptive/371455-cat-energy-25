@@ -17,7 +17,7 @@
           </picture>
           <img class="main-header__logo-text" src="img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
         </a>
-        <nav class="main-header__nav main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="toggle__button">
@@ -57,120 +57,136 @@
             <div class="selection__row-wrapper">
               <fieldset class="selection__fieldset selection__fieldset--cat-info">
                 <legend class="visually-hidden">Информация о коте</legend>
-                <p class="selection__field text-input">
-                  <label class="text-input__label" for="cat-name-field">Имя:*</label>
-                  <input class="text-input__input" type="text" id="cat-name-field" name="cat-name" placeholder="Барсик" required>
-                </p>
-                <p class="selection__field text-input">
-                  <label class="text-input__label" for="weight-field">Вес (кг):*</label>
-                  <input class="text-input__input" type="number" id="weight-field" name="cat-weight" placeholder="7" min="0" required>
-                </p>
-                <p class="selection__field text-input">
-                  <label class="text-input__label" for="age-field">Возраст (лет):</label>
-                  <input class="text-input__input" type="number" id="age-field" name="cat-age" placeholder="7" min="0">
-                </p>
+                <div class="selection__fieldset-wrapper">
+                  <p class="selection__field text-input">
+                    <label class="text-input__label" for="cat-name-field">Имя:*</label>
+                    <input class="text-input__input" type="text" id="cat-name-field" name="cat-name" placeholder="Барсик" required>
+                  </p>
+                  <p class="selection__field text-input">
+                    <label class="text-input__label" for="weight-field">Вес (кг):*</label>
+                    <input class="text-input__input" type="number" id="weight-field" name="cat-weight" placeholder="7" min="0" required>
+                  </p>
+                  <p class="selection__field text-input">
+                    <label class="text-input__label" for="age-field">Возраст (лет):</label>
+                    <input class="text-input__input" type="number" id="age-field" name="cat-age" placeholder="7" min="0">
+                  </p>
+                </div>
               </fieldset>
 
               <fieldset class="selection__fieldset selection__fieldset--plan">
                 <legend class="visually-hidden">Выбор программы</legend>
-                <ul class="selection__list">
-                  <li class="selection__item radio__item">
-                    <label class="radio__label">
-                      <input class="radio__input" type="radio" name="plan-selection" value="weight-loss" checked>
-                      <span class="radio__checkmark"></span>
-                      Похудение
-                    </label>
-                  </li>
+                <div class="selection__fieldset-wrapper">
+                  <ul class="selection__list">
+                    <li class="selection__item radio__item">
+                      <label class="radio__label">
+                        <input class="radio__input" type="radio" name="plan-selection" value="weight-loss" checked>
+                        <span class="radio__checkmark"></span>
+                        Похудение
+                      </label>
+                    </li>
 
-                  <li class="selection__item radio__item">
-                    <label class="radio__label">
-                      <input class="radio__input" type="radio" name="plan-selection" value="weight-gain">
-                      <span class="radio__checkmark"></span>
-                      Набор массы
-                    </label>
-                  </li>
+                    <li class="selection__item radio__item">
+                      <label class="radio__label">
+                        <input class="radio__input" type="radio" name="plan-selection" value="weight-gain">
+                        <span class="radio__checkmark"></span>
+                        Набор массы
+                      </label>
+                    </li>
 
-                  <li class="selection__item radio__item">
-                    <label class="radio__label">
-                      <input class="radio__input" type="radio" name="plan-selection" value="advice-wanted">
-                      <span class="radio__checkmark"></span>
-                      Не знаю (Нужен ваш совет)
-                    </label>
-                  </li>
-                </ul>
+                    <li class="selection__item radio__item">
+                      <label class="radio__label">
+                        <input class="radio__input" type="radio" name="plan-selection" value="advice-wanted">
+                        <span class="radio__checkmark"></span>
+                        Не знаю (Нужен ваш совет)
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </fieldset>
             </div>
 
             <fieldset class="selection__fieldset selection__fieldset--contacts">
               <legend class="selection__legend special-title">
-                <span class="special-title__text">Контактные данные (владельца кота)</span>
+                <div class="special-title__wrapper">
+                  <h2 class="selection__legend-title--contacts special-title__text">Контактные данные (владельца кота)</h2>
+                </div>
               </legend>
-              <div class="selection__field-wrapper">
-                <p class="selection__field text-input">
-                  <label class="text-input__label" for="email-field">E-mail:*</label>
-                  <input class="text-input__input text-input__input--icon" type="email" id="email-field" name="owner-email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="text-input__icon" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="#222" stroke-width="1.3" d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03 10 9.53l-8.35-6.5V1.5h16.7v1.53Z"/>
-                  </svg>
-                </p>
+              <div class="selection__fieldset-wrapper">
+                <div class="selection__field-wrapper">
+                  <p class="selection__field text-input">
+                    <label class="text-input__label" for="email-field">E-mail:*</label>
+                    <input class="text-input__input text-input__input--icon" type="email" id="email-field" name="owner-email" placeholder="kuklachev@gmail.com" required>
+                    <svg class="text-input__icon" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="#222" stroke-width="1.3" d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03 10 9.53l-8.35-6.5V1.5h16.7v1.53Z"/>
+                    </svg>
+                  </p>
 
-                <p class="selection__field text-input">
-                  <label class="text-input__label" for="phone-field">Телефон:*</label>
-                  <input class="text-input__input text-input__input--icon" type="tel" id="phone-field" name="owner-phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
-                  <svg class="text-input__icon" width="20" height="21" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
-                    <path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/></g><defs><clipPath id="a"><path transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
-                  </svg>
-                </p>
+                  <p class="selection__field text-input">
+                    <label class="text-input__label" for="phone-field">Телефон:*</label>
+                    <input class="text-input__input text-input__input--icon" type="tel" id="phone-field" name="owner-phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
+                    <svg class="text-input__icon" width="20" height="21" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
+                      <path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/></g><defs><clipPath id="a"><path transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs>
+                    </svg>
+                  </p>
+                </div>
               </div>
             </fieldset>
 
             <fieldset class="selection__fieldset selection__fieldset--comment">
               <legend class="selection__legend special-title">
-                <span class="special-title__text">Комментарий</span>
+                <div class="special-title__wrapper">
+                  <h2 class="special-title__text">Комментарий</h2>
+                </div>
               </legend>
-              <p class="selection__field text-input">
-                <label class="visually-hidden text-input__label" for="comment-field">Расскажите обо всех повадках кота</label>
-                <textarea class="text-input__textarea" id="comment-field" name="about-comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
-              </p>
+              <div class="selection__fieldset-wrapper">
+                <p class="selection__field text-input">
+                  <label class="visually-hidden text-input__label" for="comment-field">Расскажите обо всех повадках кота</label>
+                  <textarea class="text-input__textarea" id="comment-field" name="about-comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </p>
+              </div>
             </fieldset>
 
             <fieldset class="selection__fieldset selection__fieldset--additional">
               <legend class="selection__legend special-title">
-                <span class="special-title__text">Дополнительно</span>
+                <div class="special-title__wrapper">
+                  <h2 class="special-title__text">Дополнительно</h2>
+                </div>
               </legend>
-              <ul class="selection__list">
-                <li class="selection__item checkbox__item">
-                  <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox" name="additional-info" value="sweetener" checked>
-                    <span class="checkbox__checkmark"></span>
-                    Сахарозаменитель
-                  </label>
-                </li>
+              <div class="selection__fieldset-wrapper">
+                <ul class="selection__list">
+                  <li class="selection__item checkbox__item">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input" type="checkbox" name="additional-info" value="sweetener" checked>
+                      <span class="checkbox__checkmark"></span>
+                      Сахарозаменитель
+                    </label>
+                  </li>
 
-                <li class="selection__item  checkbox__item">
-                  <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox" name="additional-info" value="water">
-                    <span class="checkbox__checkmark"></span>
-                    Питьевая вода
-                  </label>
-                </li>
+                  <li class="selection__item  checkbox__item">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input" type="checkbox" name="additional-info" value="water">
+                      <span class="checkbox__checkmark"></span>
+                      Питьевая вода
+                    </label>
+                  </li>
 
-                <li class="selection__item  checkbox__item">
-                  <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox" name="additional-info" value="milk">
-                    <span class="checkbox__checkmark"></span>
-                    Молоко
-                  </label>
-                </li>
+                  <li class="selection__item  checkbox__item">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input" type="checkbox" name="additional-info" value="milk">
+                      <span class="checkbox__checkmark"></span>
+                      Молоко
+                    </label>
+                  </li>
 
-                <li class="selection__item  checkbox__item">
-                  <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox" name="additional-info" value="vitamin">
-                    <span class="checkbox__checkmark"></span>
-                    Витамины
-                  </label>
-                </li>
-              </ul>
+                  <li class="selection__item  checkbox__item">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input" type="checkbox" name="additional-info" value="vitamin">
+                      <span class="checkbox__checkmark"></span>
+                      Витамины
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </fieldset>
 
             <div class="selection__footer">
@@ -257,5 +273,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
