@@ -23,4 +23,3 @@ buttonBefore.addEventListener('click', function () {
 buttonAfter.addEventListener('click', function () {
   wrapperBefore.classList.remove('slider-images--state-before');
 });
-
