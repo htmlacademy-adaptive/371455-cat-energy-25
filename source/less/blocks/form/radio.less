@@ -20,6 +20,10 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .radio__checkmark {
@@ -30,6 +34,15 @@
   width: 30px;
   border: 1px solid @special-grey;
   border-radius: 50%;
+
+  &:hover {
+    border: 1px solid @hover-border;
+  }
+
+  &:disabled {
+    border: 1px solid @hover-border;
+    opacity: 0.3;
+  }
 }
 
 /* checkmark/indicator (hidden when not checked) */
@@ -52,6 +65,10 @@
   height: 14px;
   background-color: @green;
   border-radius: 50%;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {

@@ -17,19 +17,18 @@
 .social__link {
   text-decoration: none;
   color: @social-grey;
-
-  &:hover {
-    color: @green;
-  }
-
-  &:active {
-    color: @green;
-    opacity: 0.3;
-  }
 }
 
 .social__image {
   display: block;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {

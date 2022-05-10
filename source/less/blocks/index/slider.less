@@ -1,7 +1,20 @@
+.slider__wrapper {
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.slider__images {
+  margin-bottom: 21px;
+}
+
 .slider__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 210px;
+  margin: 0 auto;
 }
 
 .slider__button {
@@ -13,17 +26,112 @@
   color: @black;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider__button--before {
+  margin-left: 6px;
+}
+
+.slider__button--after {
+  margin-right: 5px;
+}
+
+.slider__scale {
+  background-color: @white;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 86px;
+  height: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.slider__toggle {
+  background-color: @green;
+  width: 50%;
+  height: 6px;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet) {
+  .slider__wrapper {
+    max-width: 591px;
+  }
+
+  .slider__images {
+    margin-bottom: 25px;
+  }
+
+  .slider__controls {
+    width: 592px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
   .slider__button {
     font-size: 20px;
     line-height: 30px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  }
+
+  .slider__scale {
+    background-color: @scale-color;
+    border: none;
+    width: 426px;
+    height: 6px;
+    padding: 0;
+  }
+
+  .slider__toggle {
+    position: absolute;
+    left: 46%;
+    width: 34px;
+    height: 34px;
+    background-color: @white;
+    border: 1px solid @special-grey;
+    border-radius: 50%;
+    padding: 0;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    transition: left 0.2s ease-out 0s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background-color: @green;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
   }
 }
 
 @media (min-width: @desktop) {
   .slider {
     padding-top: 100px;
+  }
+
+  .slider__wrapper {
+    margin: 0;
+  }
+
+  .slider__images {
+    margin-bottom: 29px;
+  }
+
+  .slider__controls {
+    padding-left: 7px;
+    padding-right: 3px;
   }
 }

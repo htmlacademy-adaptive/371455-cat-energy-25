@@ -13,14 +13,14 @@
 
 .plan__module {
   background-color: @basic-grey;
-  padding: 30px 20px 22px 20px;
+  padding: 30px 20px 19px 20px;
 }
 
 .plan__module--slim {
   margin-bottom: 20px;
 }
 
-.plan__module__title {
+.plan__module-title {
   position: relative;
   font-family: @oswald;
   font-weight: 400;
@@ -43,7 +43,7 @@
   }
 }
 
-.plan__module--slim .plan__module__title::after {
+.plan__module--slim .plan__module-title::after {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@
   left: 9px;
 }
 
-.plan__module--pro .plan__module__title::after {
+.plan__module--pro .plan__module-title::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
@@ -66,7 +66,7 @@
   left: -7px;
 }
 
-.plan__module__description {
+.plan__module-description {
   font-family: @arial;
   font-weight: 400;
   font-size: 14px;
@@ -77,7 +77,7 @@
   margin-bottom: 19px;
 }
 
-.plan__module__link {
+.plan__module-link {
   font-family: @oswald;
   font-weight: 400;
   font-size: 16px;
@@ -85,7 +85,41 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.plan__module-link::before {
+  content: "";
+  background-color: @black;
+  order: 1;
+  width: 18px;
+  height: 2px;
+  margin-left: 16px;
+  transition: width 0.3s ease-out;
+}
+
+.plan__module-link:hover::before {
+  width: 26px;
+}
+
+.plan__module-link:active::before {
+  opacity: 0.3;
+}
+
+.plan__module-link::after {
+  content: "";
+  order: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent @black;
 
   &:active {
     opacity: 0.3;
@@ -97,17 +131,21 @@
     max-width: 1024px;
     padding: 0 30px;
     margin: 0 auto;
+    display: grid;
+    row-gap: 30px;
   }
 
   .plan__module {
     padding: 77px 62px 57px 53px;
+    display: flex;
+    flex-direction: column;
   }
 
   .plan__module--slim {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 
-  .plan__module__title {
+  .plan__module-title {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 24px;
@@ -115,7 +153,7 @@
     padding-right: 254px;
   }
 
-  .plan__module__title::before {
+  .plan__module-title::before {
     width: 200px;
     height: 200px;
     top: 15px;
@@ -123,7 +161,7 @@
     right: 0;
   }
 
-  .plan__module--slim .plan__module__title::after {
+  .plan__module--slim .plan__module-title::after {
     width: 140px;
     height: 194px;
     background-image: url("../img/vector-images/module-slim-tablet.svg");
@@ -132,7 +170,7 @@
     right: 30px;
   }
 
-  .plan__module--pro .plan__module__title::after {
+  .plan__module--pro .plan__module-title::after {
     width: 269px;
     height: 112px;
     background-image: url("../img/vector-images/module-pro-tablet.svg");
@@ -141,7 +179,7 @@
     right: -35px;
   }
 
-  .plan__module__description {
+  .plan__module-description {
     font-size: 16px;
     line-height: 24px;
     border: none;
@@ -150,9 +188,13 @@
     width: 58%;
   }
 
-  .plan__module__link {
+  .plan__module-link {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .plan__module-link::before {
+    margin-left: 25px;
   }
 }
 
@@ -179,13 +221,13 @@
     margin-bottom: 0;
   }
 
-  .plan__module__title {
+  .plan__module-title {
     padding-left: 162px;
     margin-bottom: 73px;
     padding-right: 0;
   }
 
-  .plan__module__title::before {
+  .plan__module-title::before {
     width: 100px;
     height: 100px;
     top: -30px;
@@ -201,7 +243,7 @@
     margin-left: 40px;
   }
 
-  .plan__module--slim .plan__module__title::after {
+  .plan__module--slim .plan__module-title::after {
     width: 70px;
     height: 97px;
     background-image: url("../img/vector-images/module-slim-desktop.svg");
@@ -210,7 +252,7 @@
     right: auto;
   }
 
-  .plan__module--pro .plan__module__title::after {
+  .plan__module--pro .plan__module-title::after {
     width: 134px;
     height: 56px;
     background-image: url("../img/vector-images/module-pro-desktop.svg");
@@ -219,8 +261,12 @@
     left: -19px;
   }
 
-  .plan__module__description {
+  .plan__module-description {
     margin-bottom: 27px;
     width: 100%;
+  }
+
+  .plan__module-link::before {
+    margin-left: 28px;
   }
 }
