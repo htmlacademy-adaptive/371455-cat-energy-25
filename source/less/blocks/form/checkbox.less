@@ -20,6 +20,10 @@
   padding-left: 46px;
   padding-top: 6px;
   padding-bottom: 6px;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .checkbox__checkmark {
@@ -30,6 +34,15 @@
   width: 30px;
   border: 1px solid @special-grey;
   box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid @hover-border;
+  }
+
+  &:disabled {
+    border: 1px solid @hover-border;
+    opacity: 0.3;
+  }
 }
 
 /* checkmark/indicator (hidden when not checked) */
@@ -51,6 +64,10 @@
   height: 26px;
   background-image: url("/img/vector-images/tick-icon.svg");
   background-repeat: no-repeat;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
