@@ -19,7 +19,7 @@ navToggle.addEventListener('click', function () {
 });
 
 buttonBefore.addEventListener('click', function () {
-  wrapperBefore.classList.add('slider-images--state-before');
+  wrapperBefore.classList.add('slider-images__state-before');
   wrapperBefore.style.width = '100%';
   sliderToggle.style.left = '0';
 
@@ -29,7 +29,7 @@ buttonBefore.addEventListener('click', function () {
 });
 
 buttonAfter.addEventListener('click', function () {
-  wrapperBefore.classList.remove('slider-images--state-before');
+  wrapperBefore.classList.remove('slider-images__state-before');
   wrapperBefore.style.width = '0';
   sliderToggle.style.left = '93%';
 

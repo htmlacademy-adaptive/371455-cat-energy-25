@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
@@ -49,9 +49,11 @@
 
     <main class="main-container">
       <section class="promo">
-        <div class="promo__wrapper">
-          <h1 class="promo__header">Функциональное<br>питание для котов</h1>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        <div class="promo__container">
+          <div class="promo__wrapper">
+            <h1 class="promo__header">Функциональное питание для котов</h1>
+            <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          </div>
         </div>
         <div class="promo__button-wrapper">
           <a class="promo__button button" href="form.html">Подобрать программу</a>
@@ -65,7 +67,6 @@
             <h3 class="plan__module-title">Похудение</h3>
             <p class="plan__module-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="plan__module-link" href="catalog.html">Каталог slim</a>
-            <!-- как сделать чтобы двигалась стрелка -->
           </article>
           <article class="plan__module plan__module--pro">
             <h3 class="plan__module-title">Набор массы</h3>
@@ -118,22 +119,24 @@
             </div>
           </div>
 
-          <div class="slider__wrapper">
-            <div class="slider__images slider-images">
-              <div class="slider-images__wrapper slider-images__wrapper--before slider-images--state-before">
-                <div class="slider-images__image slider-images__image--before"></div>
+          <div class="slider">
+            <div class="slider__wrapper">
+              <div class="slider__images slider-images">
+                <div class="slider-images__wrapper slider-images__wrapper--before slider-images__state-before">
+                  <div class="slider-images__image slider-images__image--before"></div>
+                </div>
+                <div class="slider-images__wrapper slider-images__wrapper--after">
+                  <div class="slider-images__image slider-images__image--after"></div>
+                </div>
               </div>
-              <div class="slider-images__wrapper slider-images__wrapper--after">
-                <div class="slider-images__image slider-images__image--after"></div>
-              </div>
-            </div>
 
-            <div class="slider__controls">
-              <button class="slider__button slider__button--before" type="button">Было</button>
-              <div class="slider__scale">
-                <button class="slider__toggle" type="button" aria-label="slider"></button>
+              <div class="slider__controls">
+                <button class="slider__button slider__button--before" type="button">Было</button>
+                <div class="slider__scale">
+                  <button class="slider__toggle" type="button" aria-label="slider"></button>
+                </div>
+                <button class="slider__button slider__button--after" type="button">Стало</button>
               </div>
-              <button class="slider__button slider__button--after" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -183,8 +186,8 @@
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Наша страница ВКонтакте</span>
-                <svg class="social__image social__image--vk" width="27" height="17" role="img">
-                  <use xlink:href="/img/sprite.svg#social-image-vk"></use>
+                <svg class="social__image social__image--vk" width="28" height="22" role="img">
+                  <use xlink:href="/img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
@@ -192,8 +195,8 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Наша страница на Ютубе</span>
-                <svg class="social__image social__image--youtube" width="24" height="19" role="img">
-                  <use xlink:href="/img/sprite.svg#social-image-youtube"></use>
+                <svg class="social__image social__image--youtube" width="28" height="22" role="img">
+                  <use xlink:href="/img/sprite.svg#youtube-icon"></use>
                 </svg>
               </a>
             </li>
@@ -201,8 +204,8 @@
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Наша страница в Телеграме</span>
-                <svg class="social__image social__image--telergam" width="20" height="18" role="img">
-                  <use xlink:href="/img/sprite.svg#social-image-telergam"></use>
+                <svg class="social__image social__image--telergam" width="28" height="22" role="img">
+                  <use xlink:href="/img/sprite.svg#telegram-icon"></use>
                 </svg>
               </a>
             </li>
@@ -212,7 +215,7 @@
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Академии">HTML Academy</a>
             <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Академии">
               <svg class="copyright__icon" width="27" height="34" role="img">
-                <use xlink:href="/img/sprite.svg#copyright-icon"></use>
+                <use xlink:href="/img/sprite.svg#htmlacademy-icon"></use>
               </svg>
             </a>
           </div>
