@@ -8,6 +8,7 @@ import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+import svgmin from 'gulp-svgmin';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
@@ -65,15 +66,15 @@ const createWebp = () => {
 }
 
 // SVG
-const svg = () => {
-  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
-    .pipe(svgo())
-    .pipe(gulp.dest('build/img'))
+export const svg = () => {
+  return gulp.src(['source/img/**/*.svg', '!source/img/sprite.svg', '!source/img/icons/*.svg'])
+    .pipe(svgmin())
+    .pipe(gulp.dest('build/img'));
 }
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
+    .pipe(svgmin())
     .pipe(svgstore( {
       inlineSvg: true
     }))
