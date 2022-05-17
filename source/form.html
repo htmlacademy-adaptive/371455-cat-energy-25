@@ -9,13 +9,15 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo-link">
+        <a class="main-header__logo-link" href="index.html">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/vector-images/logo-desktop.svg">
+            <source media="(min-width: 1220px)" srcset="img/vector-images/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/vector-images/logo-tablet.svg">
             <img class="main-header__logo-picture" src="img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
           </picture>
@@ -23,7 +25,7 @@
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть/Закрыть меню</span>
             <span class="main-nav__toggle-button toggle__button"></span>
           </button>
           <ul class="main-nav__list">
@@ -107,9 +109,9 @@
 
             <fieldset class="selection__fieldset selection__fieldset--contacts">
               <legend class="selection__legend special-title special-title--additional">
-                <div class="special-title__wrapper">
-                  <h2 class="special-title__text special-title__text--additional">Контактные данные (владельца кота)</h2>
-                </div>
+                <span class="special-title__wrapper">
+                  <span class="special-title__text special-title__text--additional">Контактные данные (владельца кота)</span>
+                </span>
               </legend>
               <div class="selection__fieldset-wrapper">
                 <div class="selection__field-wrapper">
@@ -134,9 +136,9 @@
 
             <fieldset class="selection__fieldset selection__fieldset--comment">
               <legend class="selection__legend special-title">
-                <div class="special-title__wrapper">
-                  <h2 class="special-title__text">Комментарий</h2>
-                </div>
+                <span class="special-title__wrapper">
+                  <span class="special-title__text">Комментарий</span>
+                </span>
               </legend>
               <div class="selection__fieldset-wrapper">
                 <p class="selection__field text-input">
@@ -148,9 +150,9 @@
 
             <fieldset class="selection__fieldset selection__fieldset--additional">
               <legend class="selection__legend special-title">
-                <div class="special-title__wrapper">
-                  <h2 class="special-title__text">Дополнительно</h2>
-                </div>
+                <span class="special-title__wrapper">
+                  <span class="special-title__text">Дополнительно</span>
+                </span>
               </legend>
               <div class="selection__fieldset-wrapper">
                 <ul class="selection__list">
@@ -222,7 +224,7 @@
           </div>
           <div class="contacts__map-image-wrapper">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/map-img/map-image-desktop.jpeg 1x, img/map-img/map-image-desktop@2x.jpeg 2x,">
+              <source media="(min-width: 1220px)" srcset="img/map-img/map-image-desktop.jpeg 1x, img/map-img/map-image-desktop@2x.jpeg 2x">
               <source media="(min-width: 768px)" srcset="img/map-img/map-image-tablet.jpeg 1x, img/map-img/map-image-tablet@2x.jpeg 2x">
               <img class="contacts__map-image" src="img/map-img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
             </picture>
@@ -242,7 +244,7 @@
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Наша страница ВКонтакте</span>
-                <svg class="social__image social__image--vk" width="27" height="17" role="img">
+                <svg class="social__image social__image--vk" width="28" height="22" role="img">
                   <use xlink:href="/img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
@@ -251,7 +253,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Наша страница на Ютубе</span>
-                <svg class="social__image social__image--youtube" width="24" height="19" role="img">
+                <svg class="social__image social__image--youtube" width="28" height="22" role="img">
                   <use xlink:href="/img/sprite.svg#youtube-icon"></use>
                 </svg>
               </a>
@@ -260,7 +262,7 @@
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Наша страница в Телеграме</span>
-                <svg class="social__image social__image--telergam" width="20" height="18" role="img">
+                <svg class="social__image social__image--telergam" width="28" height="22" role="img">
                   <use xlink:href="/img/sprite.svg#telegram-icon"></use>
                 </svg>
               </a>
@@ -269,9 +271,9 @@
 
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Академии">HTML Academy</a>
-            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Академии">
-              <svg class="copyright__icon" width="27" height="34" role="img">
-                <use xlink:href="/img/sprite.svg#htmlacademy"></use>
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="copyright__icon" width="27" height="34" role="img" aria-label="Логотип HTML Академии">
+                <use xlink:href="/img/sprite.svg#htmlacademy-icon"></use>
               </svg>
             </a>
           </div>

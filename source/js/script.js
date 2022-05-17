@@ -24,16 +24,16 @@ buttonBefore.addEventListener('click', function () {
   sliderToggle.style.left = '0';
 
   if (document.documentElement.clientWidth < 768) {
-    sliderToggle.style.left = '6%';
+    sliderToggle.style.left = '6px';
   }
 });
 
 buttonAfter.addEventListener('click', function () {
   wrapperBefore.classList.remove('slider-images__state-before');
   wrapperBefore.style.width = '0';
-  sliderToggle.style.left = '93%';
+  sliderToggle.style.left = '396px';
 
   if (document.documentElement.clientWidth < 768) {
-    sliderToggle.style.left = '52%';
+    sliderToggle.style.left = '44px';
   }
 });
