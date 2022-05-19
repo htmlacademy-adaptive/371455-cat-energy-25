@@ -56,6 +56,10 @@
 }
 
 @media (min-width: @tablet) {
+  .slider-images__wrapper {
+    background-color: @background-grey;
+  }
+
   .slider-images__wrapper::before {
     content: "";
     background-color: @white;
@@ -80,6 +84,9 @@
   .slider-images__image--before {
     background-image: url("../img/slider-img/cat-before-tablet.png");
     background-position: 0 6px;
+    z-index: 10;
+    position: relative;
+    background-color: transparent;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/slider-img/cat-before-tablet@2x.png");
@@ -90,6 +97,7 @@
   .slider-images__image--after {
     background-image: url("../img/slider-img/cat-after-tablet.png");
     background-position: 56px 7px;
+    background-color: transparent;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/slider-img/cat-after-tablet@2x.png");
@@ -112,7 +120,7 @@
   }
 
   .slider-images__wrapper::before {
-    height: 179px;
+    height: 177px;
   }
 
   .slider-images__image--before {

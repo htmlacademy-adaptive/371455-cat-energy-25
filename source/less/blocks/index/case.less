@@ -12,10 +12,6 @@
   margin: 0 auto;
 }
 
-.case__content {
-  margin-bottom: 40px;
-}
-
 .case__title {
   margin: 0;
   margin-bottom: 40px;
@@ -39,6 +35,7 @@
 .case__details {
   max-width: 400px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .case__list {
@@ -70,7 +67,6 @@
   padding-right: 8px;
   border: 1px solid @special-grey;
   border-radius: 3px;
-  // width: 100%; проверка на переполнение
 }
 
 .case__outline {
@@ -99,26 +95,11 @@
   .case {
     position: relative;
     background-color: transparent;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: @background-grey;
-      width: 100%;
-      height: 461px;
-      bottom: 0;
-    }
-  }
-
-  .case__content {
-    margin-bottom: 72px;
   }
 
   .case__wrapper {
+    padding: 0;
     padding-top: 43px;
-    padding-bottom: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
     max-width: 1024px;
   }
 
@@ -126,13 +107,16 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 63px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .case-discription {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
-    padding-right: 6px;
+    padding-left: 30px;
+    padding-right: 36px;
   }
 
   .case__details {
@@ -141,6 +125,9 @@
     align-content: center;
     justify-content: space-between;
     max-width: 1024px;
+    padding-left: 30px;
+    padding-right: 32px;
+    margin-bottom: 72px;
   }
 
   .case__list {
@@ -195,33 +182,51 @@
   }
 
   .case__wrapper {
-    max-width: 1220px;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 70px;
+    max-width: 100%;
+    padding: 0;
+    display: block;
   }
 
   .case__content {
-    padding-top: 43px;
-    max-width: 436px;
-    width: 50%;
+    padding-top: 52px;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
   }
 
   .case__title {
-    margin-bottom: 146px;
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 77px;
+  }
+
+  .case__container {
+    position: relative;
+    background-color: @basic-grey;
+    padding-bottom: 75px;
+  }
+
+  .case__container-wrapper {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+    padding-top: 70px;
   }
 
   .case-discription {
+    margin: 0;
     margin-bottom: 69px;
     padding-right: 0;
+    padding-left: 0;
+    width: 436px;
   }
 
   .case__details {
     width: 436px;
     margin: 0;
     justify-content: flex-start;
+    padding: 0;
   }
 
   .case__list {
