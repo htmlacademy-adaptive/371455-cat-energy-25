@@ -23,6 +23,7 @@
 
   &:disabled {
     opacity: 0.3;
+    cursor: not-allowed;
   }
 }
 
@@ -42,7 +43,12 @@
   &:disabled {
     border: 1px solid @hover-border;
     opacity: 0.3;
+    cursor: not-allowed;
   }
+}
+
+.radio__input:checked:focus + .radio__checkmark {
+  border: 1px solid @green;
 }
 
 /* checkmark/indicator (hidden when not checked) */
@@ -68,6 +74,7 @@
 
   &:disabled {
     opacity: 0.3;
+    cursor: not-allowed;
   }
 }
 
