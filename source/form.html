@@ -62,15 +62,15 @@
                 <div class="selection__fieldset-wrapper">
                   <p class="selection__field text-input">
                     <label class="text-input__label" for="cat-name-field">Имя:*</label>
-                    <input class="text-input__input" type="text" id="cat-name-field" name="cat-name" placeholder="Барсик" required>
+                    <input class="text-input__input" type="text" id="cat-name-field" name="cat-name" value="Барсик" placeholder="Введите имя кота" required>
                   </p>
                   <p class="selection__field text-input">
                     <label class="text-input__label" for="weight-field">Вес (кг):*</label>
-                    <input class="text-input__input" type="text" id="weight-field" name="cat-weight" placeholder="7" required>
+                    <input class="text-input__input" type="text" id="weight-field" name="cat-weight" value="7" placeholder="Вес кота" required>
                   </p>
                   <p class="selection__field text-input">
                     <label class="text-input__label" for="age-field">Возраст (лет):</label>
-                    <input class="text-input__input" type="text" id="age-field" name="cat-age" placeholder="7">
+                    <input class="text-input__input" type="text" id="age-field" name="cat-age" placeholder="Возраст кота" value="7">
                   </p>
                 </div>
               </fieldset>
@@ -125,7 +125,7 @@
 
                   <p class="selection__field text-input">
                     <label class="text-input__label" for="phone-field">Телефон:*</label>
-                    <input class="text-input__input text-input__input--icon" type="tel" id="phone-field" name="owner-phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
+                    <input class="text-input__input text-input__input--icon" type="tel" id="phone-field" name="owner-phone" placeholder="8 (960) 900-60-90" required>
                     <svg class="text-input__icon" width="20" height="21" role="img" aria-label="Ваш номер телефона." focusable="false">
                       <use xlink:href="/img/sprite.svg#phone-icon"></use>
                     </svg>
@@ -224,9 +224,9 @@
           </div>
           <div class="contacts__map-image-wrapper">
             <picture>
-              <source media="(min-width: 1220px)" srcset="img/map-img/map-image-desktop.jpeg 1x, img/map-img/map-image-desktop@2x.jpeg 2x">
-              <source media="(min-width: 768px)" srcset="img/map-img/map-image-tablet.jpeg 1x, img/map-img/map-image-tablet@2x.jpeg 2x">
-              <img class="contacts__map-image" src="img/map-img/map-image-mobile.jpeg" width="320" height="362" alt="Карта как нас найти.">
+              <source media="(min-width: 1220px)" srcset="img/map-image-desktop.jpg 1x, img/map-image-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-image-tablet.jpg 1x, img/map-image-tablet@2x.jpg 2x">
+              <img class="contacts__map-image" src="img/map-image-mobile.jpg" width="320" height="362" alt="Карта как нас найти.">
             </picture>
           </div>
           <span class="contacts__map-pin"></span>
