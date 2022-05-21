@@ -39,16 +39,23 @@
   &:hover {
     border: 1px solid @hover-border;
   }
-
-  &:disabled {
-    border: 1px solid @hover-border;
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
 }
 
 .radio__input:checked:focus + .radio__checkmark {
   border: 1px solid @green;
+}
+
+.radio__input:checked:disabled + .radio__checkmark,
+.radio__input:not(:checked):disabled + .radio__checkmark {
+  border: 1px solid @hover-border;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.radio__input:checked:disabled ~ .radio__text,
+.radio__input:not(:checked):disabled ~ .radio__text {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* checkmark/indicator (hidden when not checked) */

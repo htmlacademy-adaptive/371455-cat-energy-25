@@ -19,9 +19,8 @@
           <picture>
             <source media="(min-width: 1220px)" srcset="img/vector-images/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/vector-images/logo-tablet.svg">
-            <img class="main-header__logo-picture" src="img/vector-images/logo-mobile-picture.svg" height="38" width="33" alt="Logo Cat-Energy.">
+            <img class="main-header__logo" src="img/vector-images/logo-mobile.svg" height="38" width="191" alt="Logo Cat-Energy.">
           </picture>
-          <img class="main-header__logo-text" src="img/vector-images/logo-mobile-text.svg" height="18" width="101" alt="Logo with text Cat-Energy.">
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle toggle" type="button">
@@ -53,7 +52,7 @@
       <section class="selection">
           <div class="selection__title-wrapper">
             <h1 class="selection__title extra-title">Подбор программы</h1>
-            <p class="selection__description extra-description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+            <p class="selection__description extra-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           </div>
           <form class="selection__form" action="http://echo.htmlacademy.ru" method="post">
             <div class="selection__row-wrapper">
@@ -83,15 +82,16 @@
                       <label class="radio__label">
                         <input class="radio__input" type="radio" name="plan-selection" value="weight-loss" checked>
                         <span class="radio__checkmark"></span>
-                        Похудение
+                        <span class="radio__text">Похудение</span>
                       </label>
                     </li>
 
                     <li class="selection__item radio">
+
                       <label class="radio__label">
                         <input class="radio__input" type="radio" name="plan-selection" value="weight-gain">
                         <span class="radio__checkmark"></span>
-                        Набор массы
+                        <span class="radio__text">Набор массы</span>
                       </label>
                     </li>
 
@@ -99,7 +99,7 @@
                       <label class="radio__label">
                         <input class="radio__input" type="radio" name="plan-selection" value="advice-wanted">
                         <span class="radio__checkmark"></span>
-                        Не знаю (Нужен ваш совет)
+                        <span class="radio__text">Не знаю (Нужен ваш совет)</span>
                       </label>
                     </li>
                   </ul>
@@ -160,7 +160,7 @@
                     <label class="checkbox__label">
                       <input class="checkbox__input" type="checkbox" name="additional-info" value="sweetener" checked>
                       <span class="checkbox__checkmark"></span>
-                      Сахарозаменитель
+                      <span class="checkbox__text">Сахарозаменитель</span>
                     </label>
                   </li>
 
@@ -168,7 +168,7 @@
                     <label class="checkbox__label">
                       <input class="checkbox__input" type="checkbox" name="additional-info" value="water">
                       <span class="checkbox__checkmark"></span>
-                      Питьевая вода
+                      <span class="checkbox__text">Питьевая вода</span>
                     </label>
                   </li>
 
@@ -176,7 +176,7 @@
                     <label class="checkbox__label">
                       <input class="checkbox__input" type="checkbox" name="additional-info" value="milk">
                       <span class="checkbox__checkmark"></span>
-                      Молоко
+                      <span class="checkbox__text">Молоко</span>
                     </label>
                   </li>
 
@@ -184,7 +184,7 @@
                     <label class="checkbox__label">
                       <input class="checkbox__input" type="checkbox" name="additional-info" value="vitamin">
                       <span class="checkbox__checkmark"></span>
-                      Витамины
+                      <span class="checkbox__text">Витамины</span>
                     </label>
                   </li>
                 </ul>
@@ -224,6 +224,9 @@
           </div>
           <div class="contacts__map-image-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/map-image-desktop.webp 1x, img/map-image-desktop@2x.webp 2x"/>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-image-tablet.webp 1x, img/map-image-tablet@2x.webp 2x"/>
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/map-image-mobile.webp 1x, img/map-image-mobile@2x.webp 2x"/>
               <source media="(min-width: 1220px)" srcset="img/map-image-desktop.jpg 1x, img/map-image-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-image-tablet.jpg 1x, img/map-image-tablet@2x.jpg 2x">
               <img class="contacts__map-image" src="img/map-image-mobile.jpg" width="320" height="362" alt="Карта как нас найти.">

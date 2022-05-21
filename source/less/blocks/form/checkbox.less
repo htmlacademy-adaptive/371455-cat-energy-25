@@ -39,20 +39,23 @@
   &:hover {
     border: 1px solid @hover-border;
   }
-
-  &:focus {
-    border: 1px solid @hover-border;
-  }
-
-  &:disabled {
-    border: 1px solid @hover-border;
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
 }
 
 .checkbox__input:checked:focus + .checkbox__checkmark {
   border: 1px solid @green;
+}
+
+.checkbox__input:checked:disabled + .checkbox__checkmark,
+.checkbox__input:not(:checked):disabled + .checkbox__checkmark {
+  border: 1px solid @hover-border;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.checkbox__input:checked:disabled ~ .checkbox__text,
+.checkbox__input:not(:checked):disabled ~ .checkbox__text {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* checkmark/indicator (hidden when not checked) */
